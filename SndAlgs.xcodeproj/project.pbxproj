@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		705AAB021D4E0A6600A40B64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 705AAB011D4E0A6600A40B64 /* main.cpp */; };
+		5B2DAC881D572F0D006DDDB9 /* GraphNode_Directed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DAC871D572F0D006DDDB9 /* GraphNode_Directed.cpp */; };
+		5B2DAC8A1D572F4C006DDDB9 /* Graph_Directed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DAC891D572F4C006DDDB9 /* Graph_Directed.cpp */; };
+		705AAB101D4E0BAE00A40B64 /* Array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 705AAB0D1D4E0BAE00A40B64 /* Array.cpp */; };
+		705AAB111D4E0BAE00A40B64 /* Graph_Undirected.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 705AAB0E1D4E0BAE00A40B64 /* Graph_Undirected.cpp */; };
+		705AAB121D4E0BAE00A40B64 /* GraphNode_Undirected.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 705AAB0F1D4E0BAE00A40B64 /* GraphNode_Undirected.cpp */; };
+		705AAB141D4E0BC900A40B64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 705AAB131D4E0BC900A40B64 /* main.cpp */; };
+		705AAB171D4E480D00A40B64 /* SndAlgs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 705AAB161D4E480D00A40B64 /* SndAlgs.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +29,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B2DAC851D5727FD006DDDB9 /* GraphNode_Directed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphNode_Directed.h; sourceTree = "<group>"; };
+		5B2DAC861D572DB9006DDDB9 /* Graph_Directed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph_Directed.h; sourceTree = "<group>"; };
+		5B2DAC871D572F0D006DDDB9 /* GraphNode_Directed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphNode_Directed.cpp; sourceTree = "<group>"; };
+		5B2DAC891D572F4C006DDDB9 /* Graph_Directed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph_Directed.cpp; sourceTree = "<group>"; };
 		705AAAFE1D4E0A6600A40B64 /* SndAlgs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SndAlgs; sourceTree = BUILT_PRODUCTS_DIR; };
-		705AAB011D4E0A6600A40B64 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		705AAB091D4E0BA600A40B64 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		705AAB0A1D4E0BA600A40B64 /* Graph_Undirected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph_Undirected.h; sourceTree = "<group>"; };
+		705AAB0B1D4E0BA600A40B64 /* GraphNode_Undirected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode_Undirected.h; sourceTree = "<group>"; };
+		705AAB0D1D4E0BAE00A40B64 /* Array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Array.cpp; sourceTree = "<group>"; };
+		705AAB0E1D4E0BAE00A40B64 /* Graph_Undirected.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph_Undirected.cpp; sourceTree = "<group>"; };
+		705AAB0F1D4E0BAE00A40B64 /* GraphNode_Undirected.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphNode_Undirected.cpp; sourceTree = "<group>"; };
+		705AAB131D4E0BC900A40B64 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		705AAB151D4E471600A40B64 /* SndAlgs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SndAlgs.h; sourceTree = "<group>"; };
+		705AAB161D4E480D00A40B64 /* SndAlgs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SndAlgs.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,9 @@
 		705AAAF51D4E0A6600A40B64 = {
 			isa = PBXGroup;
 			children = (
+				705AAB131D4E0BC900A40B64 /* main.cpp */,
+				705AAB0C1D4E0BAE00A40B64 /* src */,
+				705AAB081D4E0BA600A40B64 /* include */,
 				705AAB001D4E0A6600A40B64 /* SndAlgs */,
 				705AAAFF1D4E0A6600A40B64 /* Products */,
 			);
@@ -57,9 +78,34 @@
 		705AAB001D4E0A6600A40B64 /* SndAlgs */ = {
 			isa = PBXGroup;
 			children = (
-				705AAB011D4E0A6600A40B64 /* main.cpp */,
 			);
 			path = SndAlgs;
+			sourceTree = "<group>";
+		};
+		705AAB081D4E0BA600A40B64 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				705AAB091D4E0BA600A40B64 /* Array.h */,
+				705AAB0A1D4E0BA600A40B64 /* Graph_Undirected.h */,
+				705AAB0B1D4E0BA600A40B64 /* GraphNode_Undirected.h */,
+				705AAB151D4E471600A40B64 /* SndAlgs.h */,
+				5B2DAC851D5727FD006DDDB9 /* GraphNode_Directed.h */,
+				5B2DAC861D572DB9006DDDB9 /* Graph_Directed.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		705AAB0C1D4E0BAE00A40B64 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				705AAB0D1D4E0BAE00A40B64 /* Array.cpp */,
+				705AAB0E1D4E0BAE00A40B64 /* Graph_Undirected.cpp */,
+				705AAB0F1D4E0BAE00A40B64 /* GraphNode_Undirected.cpp */,
+				705AAB161D4E480D00A40B64 /* SndAlgs.cpp */,
+				5B2DAC871D572F0D006DDDB9 /* GraphNode_Directed.cpp */,
+				5B2DAC891D572F4C006DDDB9 /* Graph_Directed.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				705AAB021D4E0A6600A40B64 /* main.cpp in Sources */,
+				5B2DAC881D572F0D006DDDB9 /* GraphNode_Directed.cpp in Sources */,
+				705AAB101D4E0BAE00A40B64 /* Array.cpp in Sources */,
+				705AAB121D4E0BAE00A40B64 /* GraphNode_Undirected.cpp in Sources */,
+				705AAB141D4E0BC900A40B64 /* main.cpp in Sources */,
+				705AAB111D4E0BAE00A40B64 /* Graph_Undirected.cpp in Sources */,
+				705AAB171D4E480D00A40B64 /* SndAlgs.cpp in Sources */,
+				5B2DAC8A1D572F4C006DDDB9 /* Graph_Directed.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +261,8 @@
 		705AAB061D4E0A6600A40B64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +270,8 @@
 		705AAB071D4E0A6600A40B64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -239,6 +295,7 @@
 				705AAB071D4E0A6600A40B64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
