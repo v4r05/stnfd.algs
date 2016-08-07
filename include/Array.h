@@ -14,13 +14,11 @@
 
 class Array{
 		
-private:
+public:
 	
 	enum sortType{merge=0,quickfst,quickmed,quicklst};
 	enum pivotSelection{fst=0,med,lst};
 
-public:
-	
 	Array();
 	Array(int* ptr, int sz);
 	Array(std::string filename);
@@ -32,6 +30,9 @@ public:
 	void sort(sortType tp);
 	void mergeSort();
 	void quickSort(pivotSelection psl);
+	
+	unsigned long int getInversions();
+	unsigned long int getComparisons();
 	
 private:
 	

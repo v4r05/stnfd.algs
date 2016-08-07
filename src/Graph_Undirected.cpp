@@ -66,7 +66,7 @@ Graph_Undirected::Graph_Undirected(std::string filename)
 					try
 					{
 						value = std::stoi(token);
-						graph[i].addNode(&graph[value-1]);
+						graph[i].addNode(graph[value-1]);
 					} catch(std::invalid_argument& e)
 					{
 					}
@@ -76,7 +76,7 @@ Graph_Undirected::Graph_Undirected(std::string filename)
 				try
 				{
 					value = std::stoi(token);
-					graph[i].addNode(&graph[value-1]);
+					graph[i].addNode(graph[value-1]);
 				} catch(std::invalid_argument& e)
 				{
 				}
@@ -217,7 +217,7 @@ void Graph_Undirected::initCut()
 	{
 		for(int j=0;j<graph[i].connections.size();j++)
 		{
-			cutGraph[i]->addNode(cutGraph[graph[i].connections[j]->number]);
+			cutGraph[i]->addNode(*cutGraph[graph[i].connections[j]->number]);
 		}
 	}
 }

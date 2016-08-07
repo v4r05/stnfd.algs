@@ -9,25 +9,20 @@
 #include <stdio.h>
 #include "GraphNode_Undirected.h"
 
-GraphNode_Undirected::GraphNode_Undirected()
-{
+GraphNode_Undirected::GraphNode_Undirected(){
 	number = -1;
 }
 
-GraphNode_Undirected::GraphNode_Undirected(int nmb)
-{
+GraphNode_Undirected::GraphNode_Undirected(int nmb){
 	number = nmb;
 }
 
-GraphNode_Undirected::~GraphNode_Undirected()
-{
+GraphNode_Undirected::~GraphNode_Undirected(){
 }
 
-void GraphNode_Undirected::addNode(GraphNode_Undirected* gnu)
-{
-	if(gnu!=this)
-	{
-		connections.push_back(gnu);
+void GraphNode_Undirected::addNode(GraphNode_Undirected& gnu){
+	if((&gnu)!=this){
+		connections.push_back(&gnu);
 	}
 }
 

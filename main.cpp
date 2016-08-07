@@ -13,9 +13,10 @@
 #include "SndAlgs.h"
 #include "Array.h"
 #include "Graph_Undirected.h"
+#include "Graph_Directed.h"
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]){
+	
 	SndAlgs::init();
 	
 	srand((unsigned int)SndAlgs::initTime);
@@ -24,35 +25,28 @@ int main(int argc, char* argv[])
 	
 	printf("Starting\n");
 	
-	if(argc>2)
-	{
+	if(argc>2){
 		std::string mainComm = std::string(argv[1]);
 		
 		
-		if((!strcmp(argv[1], "sort")) && argc>3)
-		{
+		if((!strcmp(argv[1], "sort")) && argc>3){
 			Array meaow;
 			
 			Array::sortType srtTp;
 			
-			if(!strcmp(argv[2],"merge"))
-			{
+			if(!strcmp(argv[2],"merge")){
 				srtTp = Array::sortType::merge;
 			}
-			else if(!strcmp(argv[2],"quick"))
-			{
+			else if(!strcmp(argv[2],"quick")){
 				srtTp = Array::sortType::quickfst;
 			}
-			else if(!strcmp(argv[2],"quickfst"))
-			{
+			else if(!strcmp(argv[2],"quickfst")){
 				srtTp = Array::sortType::quickfst;
 			}
-			else if(!strcmp(argv[2],"quickmed"))
-			{
+			else if(!strcmp(argv[2],"quickmed")){
 				srtTp = Array::sortType::quickmed;
 			}
-			else if(!strcmp(argv[2],"quicklst"))
-			{
+			else if(!strcmp(argv[2],"quicklst")){
 				srtTp = Array::sortType::quicklst;
 			}
 			else{
@@ -69,22 +63,20 @@ int main(int argc, char* argv[])
 			
 			meaow.printSorted();
 			
-			switch(srtTp)
-			{
+			switch(srtTp){
 				case Array::sortType::merge:
-					std::cout<<"Inversions : "<<meaow.msInversions<<'\n';
+					std::cout<<"Inversions : "<<meaow.getInversions()<<'\n';
 					break;
 				case Array::sortType::quickfst:
 				case Array::sortType::quickmed:
 				case Array::sortType::quicklst:
-					std::cout<<"Comparisons : "<<meaow.qsComparisons<<'\n';
+					std::cout<<"Comparisons : "<<meaow.getComparisons()<<'\n';
 					break;
 				default:
 					break;
 			}
 		}
-		else if (!strcmp(argv[1], "mnmcut"))
-		{
+		else if (!strcmp(argv[1], "mnmcut")){
 			std::string filename(argv[2]);
 			
 			std::cout<<"File: "<<filename<<'\n';
@@ -92,6 +84,15 @@ int main(int argc, char* argv[])
 			Graph_Undirected grf = Graph_Undirected(filename);
 						
 			printf("Minimum Cut Number %lu\n",grf.minimumCut());
+		}
+		else if(!strcmp(argv[1], "scc")){
+			std::string filename(argv[2]);
+			
+			std::cout<<"File: "<<filename<<'\n';
+			
+			Graph_Directed grfd = Graph_Directed(filename);
+						
+			grfd.findSCC();
 		}
 		
 	}

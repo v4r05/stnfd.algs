@@ -149,6 +149,14 @@ void Array::quickSort(Array::pivotSelection psl)
 
 }
 
+unsigned long int Array::getInversions(){
+	return msInversions;
+}
+
+unsigned long int Array::getComparisons(){
+	return qsComparisons;
+}
+
 void Array::merge_sort_recursion(int l, int r, int* buffer)
 {
 	printf("Sorting from %i to %i\n",l,r);

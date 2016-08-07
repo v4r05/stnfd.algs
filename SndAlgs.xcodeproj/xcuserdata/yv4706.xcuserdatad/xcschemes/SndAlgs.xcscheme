@@ -61,6 +61,12 @@
             ReferencedContainer = "container:SndAlgs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "scc /Users/yv4706/OneDrive/Projects/coursera/Stanford-Algorithms/SndAlgs/testFiles/SCC.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

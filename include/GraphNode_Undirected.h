@@ -21,7 +21,7 @@ public:
 	GraphNode_Undirected(int nmb);
 	~GraphNode_Undirected();
 	
-	void addNode(GraphNode_Undirected* gnu);
+	void addNode(GraphNode_Undirected& gnu);
 	void removeNode(GraphNode_Undirected* gnu);
 	void merge(GraphNode_Undirected* gnu);
 	
